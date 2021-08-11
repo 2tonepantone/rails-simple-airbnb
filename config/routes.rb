@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  resources :flats
+  resources :flats do
+    collection do
+      get 'query'
+    end
+  end
 end

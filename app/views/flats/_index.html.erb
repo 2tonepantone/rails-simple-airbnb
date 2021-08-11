@@ -1,0 +1,7 @@
+<div class="container mt-5">
+  <div class="cards">
+    <% @flats.each do |flat| %>
+      <%= render 'flats/card', flat: flat %>
+    <% end %>
+  </div>
+</div>

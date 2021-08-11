@@ -7,6 +7,10 @@ class FlatsController < ApplicationController
     @flat = Flat.find(params[:id])
   end
 
+  def query
+    @flats = Flat.where("name LIKE '%oaks%'")
+  end
+
   def new
     @flat = Flat.new
   end
