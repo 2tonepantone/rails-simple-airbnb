@@ -1,0 +1,21 @@
+<div class="card-trip mb-2">
+  <img src="<%= flat.img_url %>"/>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= flat.name %></h2>
+      <p><%= flat.address %></p>
+    </div>
+  </div>
+  <div class="d-flex ml-4 mb-3">
+    <h2><i class="fas fa-users"> <%= flat.number_of_guests %></i></h2>
+    <h2><i class="fas fa-dollar-sign ml-4"> <%= flat.price_per_night %></i></h2>
+  </div>
+  <div class="card-footer">
+    <ul class="list-group list-group-horizontal">
+      <li class="list-group-item"><%= link_to 'More info', flat_path(flat) %></li>
+      <li class="list-group-item"><%= link_to 'Edit', edit_flat_path(flat) %></li>
+      <li class="list-group-item"><%= link_to 'Remove', flat_path(flat), method: :delete,
+        data: { confirm: "Are you sure you want to delete #{flat.name}?"} %></li>
+    </ul>
+  </div>
+</div>
