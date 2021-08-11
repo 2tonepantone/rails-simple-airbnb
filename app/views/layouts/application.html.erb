@@ -14,13 +14,9 @@
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
       <%= link_to "SimpleAirbnb", flats_path, class: "btn btn-light" %>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="form-inline">
-          <div class="form-group">
-            <input type="text" class="form-control" id="search" placeholder="Search">
-          </div>
-          <%= link_to query_flats_path do %>
-            <button type="submit" class="btn btn-light">Search</button>
-          <% end %>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search" value="<%= params[:query] %>">
+          <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
         </form>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
